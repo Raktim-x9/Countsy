@@ -215,7 +215,63 @@
             <h1>Countsy</h1>
             <p class="subheading">Developed my 38th tool, a text counter</p>
         </header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        /* Full screen layout with centered text */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
 
+        /* Container for animated text */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Animated Text */
+        .animated-text {
+            font-size: 2em;  /* Adjust text size to make it smaller */
+            font-weight: bold;  /* Bold font */
+            font-family: 'Courier New', monospace;  /* Line-like font */
+            color: #000;  /* Text color */
+            white-space: nowrap;  /* Prevent text from wrapping */
+            overflow: hidden;  /* Hide text that overflows */
+            width: 0; /* Start with no width */
+            animation: typing 4s steps(40) 1s forwards, backspace 4s steps(40) 5s infinite;
+            text-align: center;
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            0% { width: 0; }
+            100% { width: 20em; }
+        }
+
+        /* Backspacing animation */
+        @keyframes backspace {
+            0% { width: 20em; }
+            100% { width: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-text">Created by Raktim</div>
+    </div>
+</body>
+</html>
         <textarea class="text-input" id="text-input" placeholder="Start typing here..."></textarea>
 
         <div class="stats-container" id="stats-container">
